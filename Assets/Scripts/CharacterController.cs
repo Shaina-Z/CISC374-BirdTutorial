@@ -4,7 +4,7 @@ using UnityEngine;
 public class CharacterController : MonoBehaviour
 {
     public GameObject player;
-    public float jumpForce = 10;
+    public float jumpForce = 20;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
