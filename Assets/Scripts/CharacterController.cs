@@ -3,6 +3,7 @@ using UnityEngine;
 
 public class CharacterController : MonoBehaviour
 {
+ AudioSource Jump_Sound;
     public GameObject player;
     public float jumpForce = 20;
     public bool birdIsAlive=true;

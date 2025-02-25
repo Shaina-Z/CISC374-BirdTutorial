@@ -7,7 +7,7 @@ public class GameStateManagerScirpt : MonoBehaviour
     public int pointsScored=0;
     public Text scoreText;
     public GameObject GameOverScreen;
-
+ 
 [ContextMenu("Increase Score")]
     public void addPoint(){
         pointsScored++;
@@ -19,6 +19,6 @@ public class GameStateManagerScirpt : MonoBehaviour
     }
 
     public void gameOver(){
-
+        GameOverScreen.SetActive(true);
     }
 }
