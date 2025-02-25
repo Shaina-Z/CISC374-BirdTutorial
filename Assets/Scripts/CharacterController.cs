@@ -4,6 +4,7 @@ using UnityEngine;
 public class CharacterController : MonoBehaviour
 {
  AudioSource Jump_Sound;
+
     public GameObject player;
     public float jumpForce = 20;
     public bool birdIsAlive=true;
@@ -11,6 +12,7 @@ public class CharacterController : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
+       Jump_Sound = GetComponent<AudioSource>();
         gameStateManager = GameObject.FindGameObjectWithTag("GameStateManager").GetComponent<GameStateManagerScirpt>();
     }
 
@@ -24,6 +26,7 @@ public class CharacterController : MonoBehaviour
         void Jump()
         {
             player.GetComponent<Rigidbody2D>().linearVelocity = Vector2.up * 10;
+             Jump_Sound.Play();
         }
     }
 
