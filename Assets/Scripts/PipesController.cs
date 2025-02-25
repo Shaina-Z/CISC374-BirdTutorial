@@ -3,6 +3,7 @@ using UnityEngine;
 public class PipesController : MonoBehaviour
 {
     public int deadSpace = -45;
+    
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -17,4 +18,5 @@ public class PipesController : MonoBehaviour
             Destroy(gameObject);
         }
     }
+    
 }

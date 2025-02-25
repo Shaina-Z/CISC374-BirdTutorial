@@ -4,6 +4,7 @@ using UnityEngine;
 public class CharacterController : MonoBehaviour
 {
  AudioSource Jump_Sound;
+ 
 
     public GameObject player;
     public float jumpForce = 20;
@@ -13,6 +14,7 @@ public class CharacterController : MonoBehaviour
     void Start()
     {
        Jump_Sound = GetComponent<AudioSource>();
+       
         gameStateManager = GameObject.FindGameObjectWithTag("GameStateManager").GetComponent<GameStateManagerScirpt>();
     }
 

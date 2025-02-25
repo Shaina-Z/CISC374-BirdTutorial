@@ -7,6 +7,11 @@ public class GameStateManagerScirpt : MonoBehaviour
     public int pointsScored=0;
     public Text scoreText;
     public GameObject GameOverScreen;
+    AudioSource GameOver_Sound;
+    void Start()
+    {
+        GameOver_Sound = GetComponent<AudioSource>();
+    }
  
 [ContextMenu("Increase Score")]
     public void addPoint(){
@@ -19,6 +24,7 @@ public class GameStateManagerScirpt : MonoBehaviour
     }
 
     public void gameOver(){
+        GameOver_Sound.Play();
         GameOverScreen.SetActive(true);
     }
 }
