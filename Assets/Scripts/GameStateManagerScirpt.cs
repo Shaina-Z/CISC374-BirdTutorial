@@ -9,10 +9,12 @@ public class GameStateManagerScirpt : MonoBehaviour
     public GameObject GameOverScreen;
     public GameObject StartScreen;
     AudioSource GameOver_Sound;
+    
     void Start()
     {
          Time.timeScale = 0;
         GameOver_Sound = GetComponent<AudioSource>();
+        
     }
  
 [ContextMenu("Increase Score")]
@@ -30,6 +32,7 @@ public class GameStateManagerScirpt : MonoBehaviour
     }
 
     public void gameOver(){
+    
         GameOver_Sound.Play();
         GameOverScreen.SetActive(true);
     }
