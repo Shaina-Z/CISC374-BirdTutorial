@@ -10,9 +10,10 @@ public class GameStateManagerScirpt : MonoBehaviour
     public GameObject GameOverScreen;
     public GameObject StartScreen;
     AudioSource GameOver_Sound;
-    public int currentHighScore=0;
+    public int currentHighScore;
     void Start()
     {
+       currentHighScore=PlayerPrefs.GetInt("high score");
          Time.timeScale = 0;
         GameOver_Sound = GetComponent<AudioSource>();
         
@@ -27,7 +28,7 @@ public class GameStateManagerScirpt : MonoBehaviour
  public void startGame(){
     Time.timeScale = 1;
     StartScreen.SetActive(false);
-    highScore.text="High Score: "+PlayerPrefs.GetInt("score").ToString();
+    highScore.text="High Score: "+PlayerPrefs.GetInt("high score").ToString();
     }
     public void restartGame(){
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
