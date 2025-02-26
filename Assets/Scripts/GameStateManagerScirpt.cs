@@ -7,9 +7,11 @@ public class GameStateManagerScirpt : MonoBehaviour
     public int pointsScored=0;
     public Text scoreText;
     public GameObject GameOverScreen;
+    public GameObject StartScreen;
     AudioSource GameOver_Sound;
     void Start()
     {
+         Time.timeScale = 0;
         GameOver_Sound = GetComponent<AudioSource>();
     }
  
@@ -19,6 +21,10 @@ public class GameStateManagerScirpt : MonoBehaviour
         scoreText.text=pointsScored.ToString();
     }
 
+ public void startGame(){
+    Time.timeScale = 1;
+    StartScreen.SetActive(false);
+    }
     public void restartGame(){
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
