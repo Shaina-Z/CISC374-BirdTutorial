@@ -20,6 +20,7 @@ public class PipeMiddleScirpt : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D collision)
     {
         gameStateManager.addPoint();
+        gameStateManager.setHighScore();
         Point_Sound.Play();
     }
 }
