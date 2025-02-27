@@ -40,6 +40,7 @@ public class GameStateManagerScirpt : MonoBehaviour
         GameOverScreen.SetActive(true);
          PlayerPrefs.SetInt("high score",currentHighScore);
         PlayerPrefs.Save();
+        Time.timeScale = 0;
         
     }
 
