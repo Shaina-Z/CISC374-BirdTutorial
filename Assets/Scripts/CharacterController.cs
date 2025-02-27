@@ -4,9 +4,7 @@ using UnityEngine;
 public class CharacterController : MonoBehaviour
 {
  AudioSource Jump_Sound;
- public bool m_play;
- 
-
+    public int deadSpace = -20;
     public GameObject player;
     public float jumpForce = 20;
     public bool birdIsAlive=true;
@@ -32,6 +30,9 @@ public class CharacterController : MonoBehaviour
             
             player.GetComponent<Rigidbody2D>().linearVelocity = Vector2.up * 10;
              Jump_Sound.Play();
+        }
+        if(gameObject.transform.position.y<deadSpace){
+            gameStateManager.gameOver();
         }
     }
 
