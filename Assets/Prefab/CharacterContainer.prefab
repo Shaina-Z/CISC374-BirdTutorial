@@ -129,8 +129,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cdde946de0e7e4fd28a6b4ffb90ef57b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  deadSpace: -10
   player: {fileID: 7911611732064827440}
   jumpForce: 10
+  birdIsAlive: 1
+  gameStateManager: {fileID: 0}
 --- !u!58 &4116112857465023938
 CircleCollider2D:
   m_ObjectHideFlags: 0
