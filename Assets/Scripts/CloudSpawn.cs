@@ -3,9 +3,9 @@ using UnityEngine;
 public class CloudSpawn : MonoBehaviour
 {
     public GameObject CloudPrefab;
-    
+    public int deadSpace = -45;
     private float timer = 0;
-    public float spawnTime=2;
+    public float spawnTime=1;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -20,6 +20,9 @@ public class CloudSpawn : MonoBehaviour
         }else{
             timer =0.0f;
             Instantiate(CloudPrefab,transform.position,transform.rotation);
+        }
+         if(gameObject.transform.position.x<deadSpace){
+            Destroy(gameObject);
         }
     }
 }
